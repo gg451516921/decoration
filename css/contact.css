@@ -1,0 +1,127 @@
+body,html{
+	width: 100%;
+	height: 100%;
+	overflow-x:hidden;
+	
+}
+
+.glyphicon{
+	margin-right: 3%;
+}
+.carousel-indicators li{
+	background-color: #c8cbca;
+	border-color:#c8cbca;
+}
+.carousel-indicators .active{
+	background-color: dimgray;
+	border-color:dimgray;
+}
+
+#navbar-collapse ul{
+	margin-right: 10%;
+}
+#navbar-collapse ul li{
+	width: 120px;
+	text-align: left;
+}
+#navbar-collapse ul li:hover a{
+	color: whitesmoke;
+}
+#navbar-collapse ul li:hover span{
+	color: whitesmoke;
+}
+.carousel-inner .item img{
+	width: 100%;
+}
+.copyright{
+	width: 100%;
+	text-align: center;
+	background: #191919;
+	color: #596655;
+	margin-top: 2%;
+}
+.footer{
+	width: 100%;
+	background: #191919;
+}
+.footer .container{
+	color: darkgray;
+	font-family: 'Metamorphous', cursive;
+}
+.footer ul li a{
+	color: #666;
+	text-decoration: none;
+}
+.footer ul li a:hover{
+	cursor: pointer;
+	color: #339966;
+}
+.footer ul p{
+	font-size: 20px;
+	margin: 3% 0 2% 0;
+}
+.footer ul li{
+	font-size: 15px;
+	margin: 2% 0 0 0;
+}
+#allmap{
+	width: 100%;
+	height: 500px;
+}
+.first{
+	margin-top: 50px;
+}
+.first p:nth-child(1){
+	margin-top: 5%;
+	font-size: 19px;
+	text-indent: 32px;
+	line-height: 37px;
+	font-family: 'Metamorphous', cursive;
+}
+.first ul li{
+	font-size: 16px;
+	font-family: 'Metamorphous', cursive;
+	margin: 3% 0 3% 0;
+}
+.first p:last-child{
+	font-family: 'Metamorphous', cursive;
+	font-size: 19px;
+	margin: 5% 0 0 0;
+	line-height: 40px;
+}
+
+
+
+
+@media only screen and (min-width:768px){
+	
+	
+
+
+
+
+
+
+
+}
+@media (min-width:992px){
+	
+
+
+	
+
+
+
+
+
+}
+@media (min-width:1200px){
+	
+
+
+
+
+
+
+
+}

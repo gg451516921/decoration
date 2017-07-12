@@ -1,0 +1,82 @@
+
+<div id="europe">
+	<p>{{title}}</p>
+	<div id="n">
+			<div class="con" ng-repeat="x in arr track by $index">
+				<img src="images/e{{x}}.jpg" alt="无法加载"/>
+				<div class="detail"><span class="glyphicon glyphicon-eye-open"></span></div>
+			</div>		
+	</div>
+	<nav aria-label="Page navigation">
+		  <ul class="pagination">
+		    <li>
+		      <a href="#/europe" aria-label="Previous">
+		        <span aria-hidden="true">&laquo;</span>
+		      </a>
+		    </li>
+		    <li><a href="#/europe">1</a></li>
+		    <li class="active"><a href="#/europe-page2">2</a></li>
+		    <li class="disabled">
+		        <span aria-hidden="true">&raquo;</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+</div>
+
+
+
+<style type="text/css">	
+	.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+		background-color:#339966;
+		border-color: #339966;
+	}
+	
+	.pagination>li>a, .pagination>li>span{
+		color: #339966;
+	}
+	#europe p{
+		font-size: 43px;
+		font-family: 'Metamorphous', cursive;
+		color: #663300;
+		border-bottom: 1px solid gray;
+	}
+	#europe #n img{
+		width: 245px;
+		height: 210px;
+		position: absolute;		
+		z-index: 3;
+	}
+	#europe .con{
+		width: 236px;
+		height: 210px;
+		margin: 2%;
+		display: inline-block;
+		position: relative;
+	}
+	#europe .detail{
+		position: absolute;
+		z-index: 4;
+		width: 245px;
+		height: 210px;
+		background-color: rgba(0,0,0,0);
+		transition: all 1s;
+		cursor: pointer
+	}
+	#europe .detail:hover{
+		background-color: rgba(0,0,0,0.5);
+	}
+	#europe .detail span{
+		color: white;
+		font-size: 30px;
+		position: absolute;
+		opacity: 0;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		transition: all 1.5s;
+	}
+	#europe .detail:hover span{
+		opacity: 1;
+	}
+</style>

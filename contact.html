@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>联系我们</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/contact.css"/>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=tvNNZ3iktIg5YmfB4LaStyBCvhDr6hLe"></script>
+	</head>
+	<body ng-app="">
+		<div ng-include="'nav.html'"></div>
+		<div class="container first">
+			<p>星居易家居设计（北京）有限公司是一家专业从事别墅设计装饰与施工的服务性公司，服务群体均是社会精英和高端商务人士，
+我们为客户提供，从设计到施工售后为一体的全程式管家服务。先后承接了优山美地，观唐，尚东，丽宫，财富公馆等近百个别墅
+项目。意德尼公司是一个注重人才，培养人才，因才施用的服务性公司，公司自成立以来秉承着以人为本的管理理念，培养出一批
+具有专业精神、超强执行力凝聚力的创意团队，堪称行业翘楚。公司为每一位员工提供广阔的平台，自由的发挥空间，在这样的工
+作环境中我们的团队以最高涨的工作激情为每一位客户提供最高标准的设计家装专业享受！</p>
+			<div id="allmap"></div>
+				<ul>
+					<li>选择我们您就是选择了专业和品质！</li>
+					<li>相信我们，我们能做到！</li>
+					<li>服务至上，我们为您提供省心省时的装修环节！</li>
+					<li>品质至上，我们为您提供最高品质的配饰家居完美配比！</li>
+					<li>审美至上，我们尊重美学更尊重您的标准和要求！</li>
+					<li>生活方式至上，我们需要自由的生活方式更需要体贴入微的细节关怀！</li>
+				</ul>
+				<p>
+					公司地址：广州奥林匹克中心A4门星居易旗舰店（奥林匹克大酒店旁）<br />
+					时间：周一至周日 9:00-21:00<br />
+					电话：400-966-3788<br />
+					传真:(86)-10-87773599<br />
+					邮箱：yideni@126.com
+				</p>
+		</div>
+		<div ng-include="'footer.html'"></div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<script type="text/javascript">
+		var map = new BMap.Map("allmap");
+  map.centerAndZoom(new BMap.Point(113.2759952545166, 23.117055306224895), 12);
+  map.enableScrollWheelZoom(); 
+  // 添加带有定位的导航控件
+  var navigationControl = new BMap.NavigationControl({
+    // 靠左上角位置
+    anchor: BMAP_ANCHOR_TOP_LEFT,
+    // LARGE类型
+    type: BMAP_NAVIGATION_CONTROL_LARGE,
+    // 启用显示定位
+    enableGeolocation: true
+  });
+  map.addControl(navigationControl);
+  // 添加定位控件
+  var geolocationControl = new BMap.GeolocationControl();
+  geolocationControl.addEventListener("locationSuccess", function(e){
+    // 定位成功事件
+    var address = '';
+    address += e.addressComponent.province;
+    address += e.addressComponent.city;
+    address += e.addressComponent.district;
+    address += e.addressComponent.street;
+    address += e.addressComponent.streetNumber;
+    alert("当前定位地址为：" + address);
+  });
+  geolocationControl.addEventListener("locationError",function(e){
+    // 定位失败事件
+    alert(e.message);
+  });
+  map.addControl(geolocationControl);
+	</script>
+</html>
