@@ -31,6 +31,7 @@
 	<script type="text/javascript">
 		var app = angular.module("myApp",['ngRoute']);
 		app.config(['$routeProvider',function($routeProvider){
+			$locationProvider.hashPrefix('');
 			$routeProvider.when("/",{templateUrl:"nowstyle.html",controller:"nowstyle"})
 						  .when("/newold",{templateUrl:"newold.html",controller:"newold"})
 						  .when("/europe",{templateUrl:"europe.html",controller:"europe"})
@@ -38,8 +39,8 @@
 						  .when("/nowstyle-page2",{templateUrl:"nowstyle-page2.html",controller:"nowstyle-page2"})
 						  .when("/newold-page2",{templateUrl:"newold-page2.html",controller:"newold-page2"})
 						  .when("/europe-page2",{templateUrl:"europe-page2.html",controller:"europe-page2"})
-						  .when("/china-page2",{templateUrl:"china-page2.html",controller:"china-page2"})
-						  ;
+						  .when("/china-page2",{templateUrl:"china-page2.html",controller:"china-page2"});
+						  
 						  
 }])
 			app.controller("nowstyle",function($scope){
