@@ -19,7 +19,7 @@
 				<li><a href="#/china">中式风格</a></li>
 			</ul>
 			<div class="wrap col-lg-9 col-md-8 col-sm-4 col-xs-4 an-right">
-				<div ng-view>123</div>
+				<div ng-view></div>
 			</div>
 		</div>
 		<div ng-include="'footer.html'"></div>
@@ -31,7 +31,6 @@
 	<script type="text/javascript">
 		var app = angular.module("myApp",['ngRoute']);
 		app.config(['$routeProvider',function($routeProvider){
-			$locationProvider.hashPrefix('');
 			$routeProvider.when("/",{templateUrl:"nowstyle.html",controller:"nowstyle"})
 						  .when("/newold",{templateUrl:"newold.html",controller:"newold"})
 						  .when("/europe",{templateUrl:"europe.html",controller:"europe"})
